@@ -30,8 +30,8 @@ export default function Home({ searchParams }: { searchParams: { [key: string]: 
 
       <form className="w-1/4 flex flex-col items-center gap-y-5 p-5 border rounded shadow" action={action}>
         <p>Enter zip code and country code to get weather</p>
-        <input className="border border-black rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" type="text" name="zipCode" placeholder="Zip code" aria-autocomplete="list" accept="number" />
-        <input className="border border-black rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" type="text" name="countryCode" placeholder="Country code" maxLength={2} />
+        <input className="border border-black rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" type="text" name="zipCode" placeholder="Zip code" pattern="^(\d{4}|\d{6})$" aria-autocomplete="list" accept="number" required/>
+        <input className="border border-black rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" type="text" name="countryCode" placeholder="Country code" pattern="^([A-Z]{2})$" minLength={2} maxLength={2} required/>
         <button className="border w-3/4 items-center text-center bg-purple-100 rounded my-5" type="submit">Submit</button>
       </form>
     </main>
