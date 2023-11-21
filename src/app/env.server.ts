@@ -1,7 +1,7 @@
 import { TypeOf, z } from "zod";
 
 const zodEnv = z.object({
-    REDIS_URI: z.string(),
+    REDIS_URL: z.string(),
     REDIS_PASSWORD: z.string(),
     REDIS_PORT: z.number(),
     WEATHER_API_KEY: z.string(),
