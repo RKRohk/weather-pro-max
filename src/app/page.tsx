@@ -8,7 +8,7 @@ export default function Home({ searchParams }: { searchParams: { [key: string]: 
   const countryCode = searchParams?.countryCode
 
   if (zipCode && countryCode && typeof zipCode === 'string' && typeof countryCode === 'string') {
-    return <Suspense>
+    return <Suspense fallback={<p>Loading....</p>}>
       <Weather zipCode={zipCode} countryCode={countryCode} />
     </Suspense>
   }
