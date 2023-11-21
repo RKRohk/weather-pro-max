@@ -4,7 +4,7 @@ const zodEnv = z.object({
     REDIS_URL: z.string(),
     REDIS_PASSWORD: z.string(),
     REDIS_PORT: z.number(),
-    WEATHER_API_KEY: z.string(),
+    WEATHER_API_TOKEN: z.string(),
 })
 
 declare global {

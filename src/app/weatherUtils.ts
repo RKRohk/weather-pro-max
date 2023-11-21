@@ -2,7 +2,7 @@ import { redisClient } from "./cache";
 
 export const getWeather = async ({ zipCode, countryCode }: { zipCode: string, countryCode: string }) => {
 
-    const url = `https://api.tomorrow.io/v4/weather/forecast?location=${zipCode + ' ' + countryCode}&timesteps=1h&timesteps=1d&apikey=${process.env.WEATHER_API_KEY}`;
+    const url = `https://api.tomorrow.io/v4/weather/forecast?location=${zipCode + ' ' + countryCode}&timesteps=1h&timesteps=1d&apikey=${process.env.WEATHER_API_TOKEN}`;
     const options = { method: 'GET', headers: { accept: 'application/json' } };
 
     const client = await redisClient();
